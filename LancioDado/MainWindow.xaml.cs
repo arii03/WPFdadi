@@ -27,11 +27,11 @@ namespace LancioDado
         private void btnLancia_Click(object sender, RoutedEventArgs e)
         {
             Random random = new Random();
-            int numeroCasuale = random.Next(1, 6);
-            string r = numeroCasuale.ToString();
+            int numcasuale = random.Next(1, 6);
+            string r = numcasuale.ToString();
 
-            int numero = int.Parse(txtInserisci.Text);
-            if (numero == numeroCasuale)
+            int n = int.Parse(txtInserisci.Text);
+            if (n == numcasuale)
             {
                 txtRisultato.Text = r + " Complimenti, hai vinto!";
             }
@@ -39,7 +39,7 @@ namespace LancioDado
             {
                 txtRisultato.Text = r + " Ritenta, sarai più fortunato!";
             }
-            if (numero < 1 || numero > 6)
+            if (n < 1 || n > 6)
             {
                 MessageBox.Show("Devi inserire un numero compreso tra 1 e 6!!", "Attenzione!", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
@@ -49,16 +49,6 @@ namespace LancioDado
         {
             txtRisultato.Clear();
             txtInserisci.Clear();
-        }
-
-        private void txtRisultato_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void txtInserisci_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
         }
     }
 }
