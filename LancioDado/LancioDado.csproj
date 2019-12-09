@@ -100,5 +100,13 @@
   <ItemGroup>
     <Resource Include="rrt.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="dado\dado1.png" />
+    <Resource Include="dado\dado2.png" />
+    <Resource Include="dado\dado3.png" />
+    <Resource Include="dado\dado4.png" />
+    <Resource Include="dado\dado5.png" />
+    <Resource Include="dado\dado6.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

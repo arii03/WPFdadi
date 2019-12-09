@@ -28,6 +28,8 @@ namespace LancioDado
         {
             Random random = new Random();
             int numcasuale = random.Next(1, 6);
+            int puntata = int.Parse(txtPuntata.Text);
+            int crediti = int.Parse(lblCrediti.Content.ToString());
             string r = numcasuale.ToString();
 
             int n = int.Parse(txtInserisci.Text);
@@ -43,12 +45,36 @@ namespace LancioDado
             {
                 MessageBox.Show("Devi inserire un numero compreso tra 1 e 6!!", "Attenzione!", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
+            if (numcasuale == n)
+            {
+                crediti = crediti + puntata * 3;
+                lblCrediti.Content = crediti;
+            }
+            else
+            {
+                crediti = crediti - puntata;
+                lblCrediti.Content = crediti;
+
+            }
+            if (crediti == 0)
+            {
+                MessageBox.Show("Hai finito i crediti.", "GAME OVER", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+            }
+            else
+            {
+                MessageBox.Show("Non puoi inserire una puntata maggiore dei tuoi crediti!!", "Attenzione!", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+            Uri resourceUri = new Uri($"/Images/dado{r}.png", UriKind.Relative);
+            imgDadi.Source = new BitmapImage(resourceUri);
         }
 
         private void btnRicomincia_Click(object sender, RoutedEventArgs e)
         {
             txtRisultato.Clear();
             txtInserisci.Clear();
+            lblCrediti.Content = 150;
+            txtPuntata.Clear();
+            imgDadi.Source = null;
         }
     }
 }

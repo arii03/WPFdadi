@@ -13,7 +13,7 @@
                 <GradientStop Color="#FFD8B352" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <TextBox Name="txtInserisci" HorizontalAlignment="Left" Height="53" Margin="100,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="24" FontFamily="Simplex" TextChanged="txtInserisci_TextChanged" FontWeight="Bold" MinWidth="5" MinHeight="5">
+        <TextBox Name="txtInserisci" HorizontalAlignment="Left" Height="53" Margin="100,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="24" FontFamily="Simplex" FontWeight="Bold" MinWidth="5" MinHeight="5">
             <TextBox.Background>
                 <RadialGradientBrush>
                     <GradientStop Color="#FFFFEFD4"/>
@@ -24,7 +24,7 @@
         <Button Name="btnLancia" Content="Lancia!" HorizontalAlignment="Left" Margin="205,160,0,0" VerticalAlignment="Top" Width="120" Height="47" FontSize="18" FontFamily="Showcard Gothic" Background="#FFEA5E0E" Click="btnLancia_Click"/>
         <Label Content="Inserisci un numero da 1 a 6!" HorizontalAlignment="Left" Margin="20,25,0,0" VerticalAlignment="Top" Width="305" Height="35" FontFamily="Showcard Gothic" FontSize="20"/>
         <Button Name="btnRicomincia" Content="Ricomincia!" HorizontalAlignment="Left" Margin="455,160,0,0" VerticalAlignment="Top" Width="120" Height="47" FontFamily="Showcard Gothic" FontSize="18" Background="#FFEA5E0E" Click="btnRicomincia_Click"/>
-        <TextBox Name="txtRisultato" HorizontalAlignment="Left" Height="83" Margin="270,272,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" FontSize="22" FontFamily="Simplex" TextChanged="txtRisultato_TextChanged" FontWeight="Bold">
+        <TextBox Name="txtRisultato" HorizontalAlignment="Left" Height="83" Margin="270,272,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" FontSize="22" FontFamily="Simplex" FontWeight="Bold">
             <TextBox.Background>
                 <RadialGradientBrush>
                     <GradientStop Color="#FFF9E6C5"/>
@@ -33,7 +33,7 @@
             </TextBox.Background>
         </TextBox>
         <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100"/>
-        <TextBox HorizontalAlignment="Left" Height="53" Margin="555,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Simplex" FontWeight="Bold" FontSize="24">
+        <TextBox Name="txtPuntata" HorizontalAlignment="Left" Height="53" Margin="555,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Simplex" FontWeight="Bold" FontSize="24">
             <TextBox.Background>
                 <RadialGradientBrush>
                     <GradientStop Color="#FFF9E7D1" Offset="0"/>
@@ -42,7 +42,8 @@
             </TextBox.Background>
         </TextBox>
         <Label Content="Inserisci la puntata!" HorizontalAlignment="Left" Margin="510,25,0,0" VerticalAlignment="Top" Height="35" Width="235" FontSize="20" FontFamily="Showcard Gothic"/>
-        <Label Content="Crediti: 200" HorizontalAlignment="Left" Margin="615,369,0,0" VerticalAlignment="Top" Width="130" FontFamily="Simplex" FontWeight="Bold" FontStyle="Italic" FontSize="16"/>
-
+        <Label Name="lblCrediti" Content="150" HorizontalAlignment="Left" Margin="680,337,0,0" VerticalAlignment="Top" Width="55" Height="40" FontSize="20" FontFamily="Simplex" FontWeight="Bold"/>
+        <Label Content="Crediti:" HorizontalAlignment="Left" Margin="585,337,0,0" VerticalAlignment="Top" Height="40" Width="95" FontSize="20" FontWeight="Bold" FontFamily="Simplex"/>
+        <Image Name="imgDadi" HorizontalAlignment="Left" Height="100" Margin="140,272,0,0" VerticalAlignment="Top" Width="100"/>
     </Grid>
 </Window>
